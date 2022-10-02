@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+html {
+    font-family:"Comic Sans MS"
+}
+.parallax {
+  /* The image used */
+  background-image: url("PyChat.png");
+
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
+</head>
+<body>
+
+<div class="parallax"></div>
+
+<div style="height:1000px;background-color:rgba(210, 210, 210, 0.276);font-size:36px">
+    <div id="Some_Text">
+        <header><h1>PyChat!!</h1></header>
+        <h3><b>What Is PyChat?!?</b></h3>
+        <p>PyChat is a free and safe program made specifically for chatting with friends!</p>
+        <h3><b>Why is it called "PyChat?"</b></h3>
+        <p>The reason for the name "PyChat" is because it was written entirely in Python using the tKinter, socket, and threading modules.</p>
+        <h3><b>Why use PyChat when you can use Discord?</b></h3>
+        <p>Don't. Only use PyChat for when you want to have a safe and private chat with your friend(s).</p>
+    </div>
+    <div id="Downloads">
+        <header><h1>Downloads</h1></header>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Click Me!</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="PyChat64b.zip">64 Bit Download</a>
+              <a href="PyChat32b.zip">32 Bit Download</a>
+              <a href="PyChat86x.zip">86x Download</a>
+            </div>
+          </div>
+          
+          <script>
+          /* When the user clicks on the button, 
+          toggle between hiding and showing the dropdown content */
+          function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+          }
+          
+          // Close the dropdown if the user clicks outside of it
+          window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn')) {
+              var dropdowns = document.getElementsByClassName("dropdown-content");
+              var i;
+              for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+                }
+              }
+            }
+          }
+          </script>
+          <p style="font-size: small; color: #424242;">© Agon LLC. 2022 <b>No Rights Reserved.</b></p>
+    </div>
+
+</div>
+
+</body>
+</html>
