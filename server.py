@@ -1,8 +1,9 @@
 import socket
 import threading
+import random
 
 HOST = '127.0.0.1'
-PORT = 1234
+PORT = random.randint(1, 65535)
 LISTENER_LIMIT = 10
 active_clients = []
 
