@@ -2,6 +2,7 @@ import socket
 import threading
 import tkinter as tk
 from tkinter import scrolledtext, messagebox 
+import random
 
 DARK_GREY = "#ededed"
 MEDIUM_GREY = "#e0e4db"
@@ -11,7 +12,7 @@ WHITE = "#121212"
 FONT = ("Helvetica", 17)
 SMALL_FONT = ("Helvetica", 13)
 HOST = "127.0.0.1"
-PORT = 1234
+PORT = random.randint(1, 65535)
 
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
